@@ -29,7 +29,7 @@ I would also like to thank the following people: JD and Yuge for giving me simpl
 ## License
 MIT
 
-## Video walkthrough
+## Video walkthrough & Screen Shots
 
 ## GitHub Repository Link
 https://github.com/Sashuttle/SocialNetwork
