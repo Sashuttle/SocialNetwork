@@ -1,0 +1,17 @@
+{
+  "name": "socialnetwork",
+  "version": "1.0.0",
+  "description": "The purpose of Challenge 18 for the Full Stack Web Development Bootcamp is to practice building a mock up API for a social network web application.  Users will be able to share their thoughts, react to friends' thoughts, and create a friends list.  This will demonstrate my ability to use Express.js for routing, a MongoDB database, and use Mongoose ODM.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  }
+}
