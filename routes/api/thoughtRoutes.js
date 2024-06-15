@@ -9,7 +9,7 @@ router.route('/').get(getAllThought).post(createThought);
 router.route('/:id').get(getThoughtById).put(updateThought).delete(deleteThought);
 
 //route to add a reaction to a specific thought
-router.route('./:thoughtId/reactions').post(addReaction);
+router.route('/:thoughtId/reactions').post(addReaction);
 
 //route to delete a reaction from a specific thought
 router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
