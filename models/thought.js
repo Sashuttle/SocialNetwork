@@ -1,5 +1,7 @@
 //importing necessary modules from mongoose
 const { Schema, model, Types } = require('mongoose');
+//decided on adding a dateformat since a lot of social media platforms use timestamps
+const dateFormat = require('../utils/dateFormat');
 
 //schema for reactions
 const ReactionSchema = new Schema(
@@ -23,8 +25,16 @@ const ReactionSchema = new Schema(
         createdOn: {
             type: Date,
             default: Date.now,
-        }
+            get: (timestamp) => dateFormat(timestamp),
+        },
     },
+
+    {
+        toJSON: {
+            getters: true,
+        },
+        id: false,
+    }
 );
 
 //schema for thoughts
@@ -39,11 +49,24 @@ const ThoughtSchema = new Schema(
 
         createdOn: {
             type: Date,
-            default: Date.now
+            default: Date.now,
+            get: (timestamp) => dateFormat(timestamp),
+        },
+
+        username: {
+            type: String,
+            required: true,
         },
 
         reactions: [ReactionSchema],
     },
+    {
+        toJSON: {
+            getters: true,
+            virtuals: true,
+        },
+        id: false,
+    }
 );
 
 //property for counting number of reactions
