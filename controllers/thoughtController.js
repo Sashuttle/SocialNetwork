@@ -38,6 +38,7 @@ const thoughtController = {
                 res.sendStatus(400);
             });
     },
+
     //create a new thought
     createThought({ params, body }, res) {
         Thought.create(body)
@@ -72,6 +73,7 @@ const thoughtController = {
         })
         .catch((err) => res.json(err));
     },
+
     //delete a thought
     deleteThought({ params }, res) {
         Thought.findOneAndDelete({_id: params.id })
@@ -86,7 +88,7 @@ const thoughtController = {
                 { new: true }
             );
         })
-        .then((dbThoughtData) => {
+        .then((dbUserData) => {
             if (!dbUserData) {
                 return res
                 .status(404).json({ message: 'Thought was created, but no id associated with it!'});
@@ -97,7 +99,7 @@ const thoughtController = {
     },
 
     //adding a reaction
-    addReaction({ params, bod }, res) {
+    addReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
             { $addToSet: { reactions: body }},
@@ -125,5 +127,5 @@ const thoughtController = {
         },
     };
 
-    //export thoughtcontroller object
-    module.exports = thoughtController;
+//export thoughtcontroller object
+module.exports = thoughtController;
