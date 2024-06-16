@@ -26,10 +26,13 @@ I would like to acknowledge the resources that have been available to me for thi
 
 I would also like to thank the following people: JD and Yuge for giving me simple explanations for my code when I was still not understanding parts of my code. 
 
+I would also like to thank my tutor Andres!  He has always been absolutely amazing and helped me understand what I'm doing wrong. He helped me catch a few typos in my code as well and helped me understand how to use insomnia more efficiently.
+
 ## License
 MIT
 
 ## Video walkthrough & Screen Shots
+https://drive.google.com/file/d/1uGI2P8zkxZIgm5Xtka7rWkwjz66hvj8p/view
 
 ## GitHub Repository Link
 https://github.com/Sashuttle/SocialNetwork

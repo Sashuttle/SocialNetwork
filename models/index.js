@@ -1,6 +1,6 @@
 //Note: Importing required modules 
-const user = require('./user');
-const thought = require('./thought');
+const User = require('./user');
+const Thought = require('./thought');
 
 //Note: Export modules as properties of an object
-module.exports = {user, thought};
+module.exports = {User, Thought};
