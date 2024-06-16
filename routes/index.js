@@ -3,7 +3,7 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 
 //Note: Use API routes when path starts with /api
-router.use('./api', apiRoutes);
+router.use('/api', apiRoutes);
 
 //Note: Middleware
 router.use((req, res) => {
